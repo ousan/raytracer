@@ -25,10 +25,4 @@ g++ \
 example.cpp \
 $LIB_POST_BUILD_DIR/libraytracer.a \
 -o raytracer \
--IlibRaytracer/inc/camera \
--IlibRaytracer/inc/canvas \
--IlibRaytracer/inc/interface \
--IlibRaytracer/inc/object \
--IlibRaytracer/inc/operation \
--IlibRaytracer/inc/scene \
--IlibRaytracer/inc/utils 
+-IlibRaytracer/inc

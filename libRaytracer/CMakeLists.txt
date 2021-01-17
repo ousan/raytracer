@@ -87,37 +87,7 @@ add_library(raytracer STATIC ${SOURCES})
 message("# Including include directories...")
 target_include_directories(raytracer
     PUBLIC
-        ${CAMERA_INC_DIR}
-)
-
-target_include_directories(raytracer
-    PUBLIC
-        ${CANVAS_INC_DIR}
-)
-
-target_include_directories(raytracer
-    PUBLIC
-        ${INTERFACE_INC_DIR}
-)
-
-target_include_directories(raytracer
-    PUBLIC
-        ${OBJECT_INC_DIR}
-)
-
-target_include_directories(raytracer
-    PUBLIC
-        ${OPERATION_INC_DIR}
-)
-
-target_include_directories(raytracer
-    PUBLIC
-        ${SCENE_INC_DIR}
-)
-
-target_include_directories(raytracer
-    PUBLIC
-        ${UTILS_INC_DIR}
+        ${INC_DIR}
 )
 
 message("# Including include directories completed")
