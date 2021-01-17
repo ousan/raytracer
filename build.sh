@@ -1,5 +1,5 @@
 g++ -std=c++17 \
-main.cpp \
+example.cpp \
 libRaytracer/src/camera/*.cpp \
 libRaytracer/src/canvas/*.cpp \
 libRaytracer/src/interface/*.cpp \
