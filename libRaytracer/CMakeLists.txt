@@ -76,7 +76,7 @@ set(SOURCES ${CAMERA_SOURCES}
 			${INTERFACE_SOURCES}
 			${OBJECT_SOURCES}
 			${OPERATION_SOURCES}
-            ${SCENE_SOURCE}
+            ${SCENE_SOURCES}
             ${UTILS_SOURCES}
 )
 message("# Combining all source files completed")
