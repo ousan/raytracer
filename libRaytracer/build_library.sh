@@ -1,10 +1,13 @@
 #!/bin/bash
 
-PROJECT_DIR=$(pwd)
-LIB_SOURCE_DIR=$PROJECT_DIR/libRaytracer
+LIB_SOURCE_DIR=$(pwd)
 BUILD_DIR=$LIB_SOURCE_DIR/build
-LIB_POST_BUILD_DIR=$PROJECT_DIR/lib
+LIB_POST_BUILD_DIR=$LIB_SOURCE_DIR/lib
 
+echo "DIRECTORIES"
+echo $LIB_SOURCE_DIR
+echo $BUILD_DIR
+echo $LIB_POST_BUILD_DIR
 if [[ -d "$BUILD_DIR" ]]
 then
     echo "$BUILD_DIR exists on your filesystem."
@@ -17,12 +20,3 @@ else
     make
     cp *.a $LIB_POST_BUILD_DIR
 fi
-
-cd $PROJECT_DIR
-echo "$LIB_POST_BUILD_DIR"
-g++ \
--std=c++17 \
-example.cpp \
-$LIB_POST_BUILD_DIR/libraytracer.a \
--o raytracer \
--IlibRaytracer/inc
