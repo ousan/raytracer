@@ -11,12 +11,12 @@ echo $LIB_POST_BUILD_DIR
 if [[ -d "$BUILD_DIR" ]]
 then
     echo "$BUILD_DIR exists on your filesystem."
-else
-    echo "$BUILD_DIR not exists on your filesystem."
-    mkdir $BUILD_DIR
-    mkdir $LIB_POST_BUILD_DIR
-    cd $BUILD_DIR
-    cmake ..
-    make
-    cp *.a $LIB_POST_BUILD_DIR
+    rm -rf $BUILD_DIR
 fi
+
+mkdir $BUILD_DIR
+mkdir $LIB_POST_BUILD_DIR
+cd $BUILD_DIR
+cmake ..
+make
+cp *.a $LIB_POST_BUILD_DIR
